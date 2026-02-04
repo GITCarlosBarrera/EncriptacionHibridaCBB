@@ -8,22 +8,6 @@ import java.security.PublicKey;
 import java.util.Base64;
 import java.util.Scanner;
 
-/*
- * 1 - ¿Qué ocurre si intentas introducir una clave de cifrado que no tiene los bits
- * correspondientes válidos para realizar el cifrado AES?
- *
- * El programa se detiene y lanza un error: InvalidKeyException.
- * Esto sucede porque AES solo acepta claves de exactamente 16, 24 o 32 bytes.
- * Si pones más o menos, el algoritmo no puede trabajar.
- *
- *
- *
- * 2 - ¿Qué ocurre si utilizas una clave de descifrado que no es la misma que la de cifrado?
- * El programa lanza un error de relleno: BadPaddingException.
- * Como la clave es incorrecta, los datos se descifran mal y el sistema detecta
- * que el resultado final es "basura" que no encaja con el formato esperado.
- * */
-
 public class HybridEncryptionExample {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
